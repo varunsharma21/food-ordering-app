@@ -18,20 +18,21 @@ const HeaderCartButton = (props) => {
     btnIsHighlighted ? classes.bump : ""
   }`;
 
-  useEffect(() => {
-    if (items.length === 0) {
-      return;
-    }
-    setBtnIsHighlighted(true);
+  // For animation of cart button.
+  // useEffect(() => {
+  //   if (items.length === 0) {
+  //     return;
+  //   }
+  //   setBtnIsHighlighted(true);
 
-    const timer = setTimeout(() => {
-      setBtnIsHighlighted(false);
-    }, 300);
+  //   const timer = setTimeout(() => {
+  //     setBtnIsHighlighted(false);
+  //   }, 300);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [items]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [items]);
 
   return (
     <button className={btnClasses} onClick={props.onClick}>
